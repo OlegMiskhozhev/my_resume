@@ -1,0 +1,69 @@
+.back
+	{min-height: 800px;
+		background-color: #D9DCE1;}
+.center
+	{display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-wrap: wrap;}
+.great
+	{font-size: 90px;
+		font-family: Oswald;
+		font-weight: 600;
+		font-style: italic;
+		text-shadow: 2px 2px 2px #5E7388;
+		color: #2C4E67;
+		text-align: center;
+		line-height: 1.1;
+		margin: 5px;}
+.question
+	{font-size: 36px;
+		font-family: Oswald;
+		font-weight: 600;
+		color: #5E7388;
+		text-align: center;
+		margin: 10px;}
+.my_photo
+	{height: 300px;
+	width: 300px;
+		border: 2px solid #2C4E67;
+		border-radius: 50%;
+		margin: 30px;}
+.button
+	{height: 50px;
+		border-radius: 20px;
+		margin: 8px;
+		background-color: #2C4E67;
+		color: white;
+		font-family: Oswald;
+		font-size: 20px;
+		font-weight: 600;
+		text-decoration: none;}
+@media (max-width: 500px)
+	{
+	.my_photo
+	{height: 250px;
+	width: 250px;
+		border: 2px solid #2C4E67;
+		border-radius: 50%;
+		background: url('IMG_2125.JPG') no-repeat center;
+		background-size: cover;
+		margin: 30px;}
+.great
+	{font-size: 80px;
+		font-family: Oswald;
+		font-weight: 600;
+		font-style: italic;
+		text-shadow: 2px 2px 2px #5E7388;
+		color: #2C4E67;
+		text-align: center;
+		line-height: 1.1;
+		margin: 5px;}
+.question
+	{font-size: 30px;
+		font-family: Oswald;
+		font-weight: 600;
+		color: #5E7388;
+		text-align: center;
+		margin: 10px;}
+	}

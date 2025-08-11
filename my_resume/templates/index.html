@@ -1,0 +1,84 @@
+{% load static %}
+
+<!doctype html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% load django_bootstrap5 %}
+  {% load compress %}
+  {% compress css %}
+    <link type="text/x-scss" href="{% static 'bootstrap/scss/bootstrap.scss' %}" rel="stylesheet" media="screen">
+    <link type="text/x-scss" href="{% static 'css/custom.scss' %}" rel="stylesheet" media="screen">
+  {% endcompress %}
+  {% bootstrap_javascript %}
+  <link rel='stylesheet' href="{% static 'css/new_style.css' %}">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <title>{{ user.first_name }}{{ user.last_name }}</title>
+</head>
+
+<body style="font-family: Gill Sans;">
+
+<header>
+</header>
+
+<main>
+
+<div class="container-fluid">
+<div class="row justify-content-center align-items-end">
+
+  <div class="col-lg-6 col-xl-5">
+    {% include 'includes/photo.html' %}
+  </div>
+
+  <div id="resume_section" class="col-lg-6 col-xl-5">
+
+    <div class="my-4">
+      <h1 class="text-secondary display-3 mb-0">
+        {{ user.first_name }} {{ user.last_name }}
+      </h1>
+      <h2 ><b>{{ user.position }}</b></h2>
+    </div>
+
+    <div style="font-family: Comic Sans; font-size: 20px; font-style: italic; margin: 0;">
+      <p>"Привет! Это моя web-страница. Немного Django и Bootsrap - я еще работаю над этиим, но вы уже многое можете обо мне узнать!"</p>
+    </div>
+
+    {% for section in sections %}
+
+    <div class="row align-items-center my-2">
+      <div class="col-1 text-danger text-center">
+        <i class="{{ section.icon }}"></i>
+      </div>
+      <div class="col-11 dropdown">
+        <button class="btn col-12 btn-outline-danger dropdown-toggle fs-5" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          {{ section.name }}
+        </button>
+        <div class="dropdown-menu p-3 col-12">
+          {% include section.template %}
+        </div>
+      </div>
+    </div>
+
+    {% endfor %}
+
+    <div class="row align-items-center my-2">
+      <div class="col-1 text-danger text-center fs-2">
+        <i class="bi bi-file-pdf"></i>
+      </div>
+      <div class="col-11">
+        <a class="btn col-12 btn-danger fs-5" href="/download">
+          Скачать PDF
+        </a>
+      </div>
+    </div>
+
+  </div> 
+
+</div>
+</div>
+
+</main>
+</body>
+</html>

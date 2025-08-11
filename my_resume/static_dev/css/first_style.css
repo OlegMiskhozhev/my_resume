@@ -1,0 +1,121 @@
+.section
+	{height: 800px;}
+.section1_1
+	{height: 500px;}
+.section1_2
+	{height: 180px;}
+.picture
+	{background-size: cover;}
+.code
+	{background: url('gray.jpg') no-repeat;
+	 background-size: cover;}
+.blue
+	{background-color: #D9DCE1;
+		opacity: 0,2;}
+.box
+	{display: flex;
+	 align-items: center;
+	 justify-content: center;}
+.content_box
+	{background-color: #2C4E67;
+	 border-radius: 20px;}
+.but
+	{color: white;
+	background-color: #2C4E67;
+	margin: 5px;
+	margin-top: 10px;
+	width: 200px;
+	height: 50px;
+	font-family: sans-serif;
+	font-size: 20px;
+	font-weight: 600;
+	text-decoration: none;}
+.greating
+	{color: #2C4E67;
+	font-family: Times new roman;
+	font-size: 120px;
+	text-shadow: 2px 2px 2px grey;
+	font-style: italic;
+	font-weight: 600;}
+.top
+	{color: #1E3C56;
+	font-family: sans-serif;
+	font-size: 60px;
+	font-weight: bold;
+	margin: 30px;}
+.about1_1
+	{width: 300px;
+	height: 450px;
+	background: url('IMG_4571.png') no-repeat center;
+	background-size: cover;
+	margin: 10px;}
+.about1_2
+	{width: 750px;
+	height: 450px;
+	margin: 10px;}
+.about2_1
+	{width: 300px;
+	height: 100px;
+	margin: 10px;}
+.about2_2
+	{width: 750px;
+	height: 100px;
+	margin: 10px;}
+.edu
+	{width: 400px;
+	height: 500px;
+	padding: 5px;
+	margin: 10px;
+	margin-bottom: 20px;}
+.exp
+	{width: 500px;
+	height: 200px;
+	margin: 15px;
+	margin-inline: 40px;}
+.exp_font_1
+	{color: white;
+	font-size: 30px;
+	text-align: center;}
+.exp_font_2
+	{color: white;
+	font-size: 24px;
+	text-align: center;}
+.skills_1
+	{color: HEX: #5E7388;
+	font-family: times new roman;
+	font-size: 40px;
+	font-style: italic;
+	font-weight: 700;
+	margin-inline: 40px;
+	width: 500px;
+	height: 80px;}
+.skills_2
+	{width: 500px;
+	 height: 400px;
+	 margin: 5px;
+	 margin-inline: 40px;
+	 margin-bottom: 20px;}
+p
+	{color: white;
+	font-family: times new roman;
+	font-size: 19px;
+	text-align: center;
+	line-height: 1.5;}
+a:hover
+	{background: rgba(224, 78, 57, 1.0);}
+.link
+	{color: white;
+	 text-decoration: none;}
+.img
+	{height: 130px;
+	 margin: 20px;
+	 text-align: center;}
+.list
+	{font-size: 40px;
+	text-align: center;}
+.td
+	{color: white;
+	font-family: times new roman;
+	font-size: 25px;
+	text-align: center;
+	margin: 10px;}

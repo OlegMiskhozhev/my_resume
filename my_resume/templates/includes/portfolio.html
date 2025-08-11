@@ -1,0 +1,23 @@
+{% load static %}
+
+{% for project in user_projects %}
+
+<div class="card {% if not forloop.last %}mb-3{%endif %}">
+  <a href="{{ project.project.url }}">
+    <img class="card-img-top" 
+    src="{{ project.project.screenshot.url }}">
+  </a>
+  <div class="card-body">
+    <h5 class="card-title text-danger lh-1">
+      {{ project.project.name }}
+    </h5>
+    <p class="card-text text-muted">
+      {{ project.project.release_date }}
+    </p>
+    <p class="card-text">
+      Вовлеченность: {{ project.involvement }}
+    </p>
+  </div>
+</div>
+
+{% endfor %}

@@ -1,0 +1,49 @@
+{% load static %}
+
+<div class="ps-3">
+  <div class="border-start ms-5">
+
+  <div class="position-relative my-3">
+    <img class="position-absolute top-0 start-0 translate-left-50 mt-2" 
+    src="{% static 'img/logo_IT.png' %}"
+    width="35" height="35">
+    <div class="card ms-4">
+      <div class="card-body">
+        <h5 class="card-title text-danger lh-1">IT</h5>
+        <p class="card-text text-muted">2025 - </p>
+        <p class="card-text">
+          Здесь может быть ваша компания!
+        </p>
+        <button class="btn btn-outline-danger" type="button">
+          Связаться со мной
+        </button>
+      </div>
+    </div>
+  </div>
+
+  {% for work in user.work_place.all %}
+
+  <div class="position-relative my-3">
+    <p class="position-absolute top-0 start-0 translate-left-150 fs-4 lh-lg">
+      {{ work.end_job|date:"Y" }}
+    </p>
+    <img class="position-absolute top-0 start-0 translate-left-50 mt-2" 
+    src="{{ work.organization.logo.url }}" width="35" height="35">
+    <div class="card ms-4">
+      <div class="card-body">
+        <h5 class="card-title text-danger lh-1">{{ work.organization.name }}</h5>
+        <p class="card-text text-muted">
+          {{ work.start_job|date:"Y" }} - {{ work.end_job|date:"Y" }}
+        </p>
+        <p class="card-text">
+          Направление: {{ work.organization.business_area }}<br>
+          Должность: {{ work.position }}
+        </p>
+      </div>
+    </div>
+  </div>
+
+  {% endfor %}
+
+  </div>
+</div>

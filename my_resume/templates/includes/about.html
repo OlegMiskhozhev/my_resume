@@ -1,0 +1,15 @@
+<div class="card p-3">
+<article>
+  <p class="mb-4">
+    {{ user.description }}
+  </p>
+  <p>Имя: <b>{{ user.first_name }}</b></p>
+  <p>Фамилия: <b>{{ user.last_name }}</b></p>
+  <p>Позиция: <b>{{ user.position }}</b></p>
+  <p>Возраст: <b>{{ user.age }} лет</b></p>
+  <p><i class="bi bi-geo-alt"></i> {{ user.location }}</p>
+  <p><i class="bi bi-telephone"></i> {{ user.phone_number }}</p>
+  <p><i class="bi bi-envelope"></i> {{ user.email }}</p>
+  <p></p><i class="bi bi-github"></i> {{ user.github_profile }}</p>
+</article>
+</div>

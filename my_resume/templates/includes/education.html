@@ -1,0 +1,33 @@
+{% load static %}
+
+<div class="ps-3">
+  <div class="border-start ms-5">
+
+  {% for item in user_educations %}
+
+  <div class="position-relative my-3">
+    <h4 class="position-absolute top-0 start-0 translate-left-150 fs-4 lh-lg">
+      {{ item.end_program|date:"Y" }}
+    </h4>
+      <img class="position-absolute top-0 start-0 translate-left-50 mt-2" 
+      src="{{ item.education.institute.logo.url }}" width="35" height="35">
+      <div class="card ms-4">
+        <div class="card-body">
+          <h5 class="card-title text-danger lh-1">
+            {{ item.education.institute.name }}
+          </h5>
+          <p class="card-text text-muted">
+            {{ item.start_program }} - {{ item.end_program }}
+          </p>
+          <p class="card-text">
+            Направление: {{ item.education.program }}<br>
+            Квалификация: {{ item.education.qualification }}
+          </p>
+        </div>
+      </div>
+  </div>
+
+  {% endfor %}
+
+  </div>
+</div>

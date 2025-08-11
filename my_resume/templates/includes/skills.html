@@ -1,0 +1,16 @@
+<div class="card fw-lighter p-3 pxe-4">
+
+  {% for skill in user_skills %}
+
+  <div class="align-items-end m-2">
+      <div class="fs-5">{{ skill.skill.tool }}</div>
+      <div class="col-12 border mb-1 p-0" style="height: 10px">
+          <div class="m0 bg-danger opacity-75" 
+              style="width: {{ skill.grade }}%; height: 100%;">
+          </div>
+      </div>
+  </div>
+
+  {% endfor %}
+
+</div>

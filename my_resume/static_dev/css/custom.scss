@@ -1,0 +1,29 @@
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/variables-dark";
+@import "bootstrap/scss/maps";
+@import "bootstrap/scss/mixins";
+@import "bootstrap/scss/utilities";
+
+
+$translate-values: (
+  50: translateX(-50%),
+  100: translateX(-100%),
+  150: translateX(-150%),
+  200: translateX(-200%)
+);
+
+$utilities: map-merge(
+  $utilities,
+  (
+    "translate-left": (
+      property: transform,
+      class: translate-left,
+      values: $translate-values,
+    ),
+  )
+);
+
+@import "bootstrap/scss/utilities/api";
+
+

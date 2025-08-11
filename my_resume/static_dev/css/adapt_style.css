@@ -1,0 +1,149 @@
+.bg
+	{border: 1px solid black;}
+.back
+	{background-color: #D9DCE1;}
+.main1_1
+	{height: 500px;}
+.main1_2
+	{height: 150px;
+		font-family: Oswald;
+		font-weight: 600;
+		font-style: italic;
+		text-shadow: 2px 2px 2px #2C4E67;
+		color: #5E7388}
+.menu
+	{height: 150px;}
+.button
+	{height: 50px;
+		border-radius: 20px;
+		margin: 8px;
+		background-color: #2C4E67;
+		color: white;
+		font-family: Oswald;
+		font-size: 20px;
+		font-weight: 600;
+		text-decoration: none;}
+.top
+	{height: 120px;
+		font-family: Oswald;
+		font-weight: 600;
+		text-shadow: 2px 2px 2px #2C4E67;
+		line-height: 1;
+		color: #5E7388}
+.small_top
+	{height: 100px;
+		font-family: Oswald;
+		font-size: 40px;
+		font-style: italic;
+		color: #5E7388}
+.about
+	{min-height: 270px;
+		border-radius: 20px;}
+.about_2
+	{min-height: 250px;
+		background-color: #2C4E67;}
+.about_text
+	{font-family: Times new roman;
+		color: #2C4E67;
+		font-size: 26px;
+		line-height: 1,2;
+		text-align: center;
+		vertical-align: middle;}
+.about_text_2
+	{font-family: Times new roman;
+		color: white;
+		font-size: 20px;
+		text-align: center;
+		vertical-align: middle;
+		line-height: 1.5;}
+.link
+	{color: white;
+		text-decoration: none;}
+.edu
+	{height: 550px;}
+.edu_1
+	{height: 200px;}
+.edu_2
+	{height: 350px;
+		margin: 10px;}
+.edu_text
+	{font-family: Times new roman;
+		color: white;
+		font-size: 24px;
+		text-align: center;
+		vertical-align: middle;
+		line-height: 1,2;}
+.skills
+	{height: 450px}
+.content_box
+	{background-color: #2C4E67;
+		border-radius: 20px;
+		color: white;
+		margin: 10px;}
+.img
+	{height: 180px;
+	 	margin: 20px;
+	 	text-align: center;}
+.list
+	{font-family: Times new roman;
+		font-size: 40px;}
+.center
+	{display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-wrap: wrap;}
+a:hover
+	{background: rgba(224, 78, 57, 1.0);}
+
+@media (min-width: 1200px)
+	{
+		.lg_w2
+			{width: 16.66%;}
+		.lg_w3
+			{width: 25%;}
+		.lg_w6
+			{width: 50%;}
+		.great
+			{font-size: 120px;}
+		.top_head
+			{font-size: 60px;}
+	}
+@media (min-width: 992px) and (max-width: 1199px)
+	{
+		.m_w2
+			{width: 16.66%;}
+		.m_w3
+			{width: 25%;}
+		.m_w6
+			{width: 50%;}
+		.great
+			{font-size: 100px;}
+		.top_head
+			{font-size: 50px;}
+		.wrap
+			{flex-wrap: nowrap;}
+	}
+@media (max-width: 991px)
+	{
+		.s_w2
+			{width: 16.66%;}
+		.s_w3
+			{width: 25%;}
+		.s_w6
+			{width: 40%;}
+		.great
+			{font-size: 80px;
+				text-align: center;
+				line-height: 1;}
+		.top_head
+			{font-size: 40px;}
+	}
+@media (max-width: 500px)
+	{
+		.great
+			{font-size: 56px;
+				margin: 5px;}
+		.list
+			{font-family: Times new roman;
+			font-size: 32px;}
+	}

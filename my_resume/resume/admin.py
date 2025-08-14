@@ -1,4 +1,5 @@
 from django.contrib import admin
+from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
 from django.contrib.auth import get_user_model
 
 from resume.models import (
@@ -9,8 +10,28 @@ User = get_user_model()
 
 
 @admin.register(User)
-class UserAdmin(admin.ModelAdmin):
-    pass
+class UserAdmin(BaseUserAdmin):
+    model = User
+    fieldsets = BaseUserAdmin.fieldsets + (
+        (None, {"fields": [
+            'photo',
+            'position',
+            'description',
+            'birthday',
+            'location',
+            'phone_number',
+            'github_profile',
+            'work_place',
+        ]}),)
+    list_display = (
+        'id',
+        'username',
+        'email',
+        'first_name',
+        'last_name',
+    )
+    list_display_links = ('username',)
+    filter_horizontal = ('work_place',)
 
 
 @admin.register(Course)

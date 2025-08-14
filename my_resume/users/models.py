@@ -8,6 +8,7 @@ from resume.models import Course, Project, Skill, WorkPlace
 
 
 class CustomUser(AbstractUser):
+    """Модель для пользователей."""
     photo = models.ImageField(
         'Фото',
         upload_to='users_photo',
@@ -62,7 +63,7 @@ class CustomUser(AbstractUser):
     )
     work_place = models.ManyToManyField(
         WorkPlace,
-        verbose_name='Место работы',
+        verbose_name='Места работы',
         blank=True,
     )
     project = models.ManyToManyField(
@@ -79,6 +80,7 @@ class CustomUser(AbstractUser):
 
 
 class UserEducation(models.Model):
+    """Модель для образований пользователей с указанием периода прохождения."""
     user = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
     education = models.ForeignKey(Course, on_delete=models.CASCADE)
     start_program = models.DateField(
@@ -99,6 +101,7 @@ class UserEducation(models.Model):
 
 
 class UserSkills(models.Model):
+    """Моедль для навыков пользователя с указанием уровня освоения."""
     user = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
     skill = models.ForeignKey(Skill, on_delete=models.CASCADE)
     grade = models.CharField(
@@ -118,6 +121,8 @@ class UserSkills(models.Model):
 
 
 class UserProjects(models.Model):
+    """Модель для реализованных проектов пользователя
+    с указанием уровня вовлеченности."""
     user = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
     project = models.ForeignKey(Project, on_delete=models.CASCADE)
     involvement = models.CharField(max_length=constants.CHAR_LENGTH)

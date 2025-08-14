@@ -9,6 +9,7 @@ User = get_user_model()
 
 
 class NewVersion(TemplateView):
+    """Представление для вывода главной страницы проекта."""
     template_name = 'index.html'
 
     def get_context_data(self, **kwargs):
@@ -26,6 +27,7 @@ class NewVersion(TemplateView):
 
 
 def download(request, *args, **kwargs):
+    """Позволяет скачать PDF файл с резюме пользователя."""
     response = FileResponse(
         open('media/resume.pdf', 'rb'),
         as_attachment=True,

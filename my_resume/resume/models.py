@@ -5,6 +5,7 @@ from my_resume import constants
 
 
 class Institute(models.Model):
+    """Модель для образовательных учреждений."""
     name = models.CharField(
         'Название',
         max_length=constants.CHAR_LENGTH
@@ -27,6 +28,7 @@ class Institute(models.Model):
 
 
 class Organisation(models.Model):
+    """Модель для организаций-работодателей."""
     name = models.CharField(
         'Название',
         max_length=constants.CHAR_LENGTH
@@ -53,7 +55,7 @@ class Organisation(models.Model):
 
 
 class Course(models.Model):
-
+    """Модель для образовательных программ."""
     institute = models.ForeignKey(
         Institute,
         on_delete=models.CASCADE,
@@ -78,6 +80,7 @@ class Course(models.Model):
 
 
 class WorkPlace(models.Model):
+    """Модель для мест работы пользователя."""
     organization = models.ForeignKey(
         Organisation,
         on_delete=models.CASCADE,
@@ -105,6 +108,7 @@ class WorkPlace(models.Model):
 
 
 class Skill(models.Model):
+    """Модель для навыков."""
     tool = models.CharField(
         'Инструмент',
         max_length=constants.CHAR_LENGTH
@@ -119,6 +123,7 @@ class Skill(models.Model):
 
 
 class Project(models.Model):
+    """Модель для проектов."""
     name = models.CharField(
         'Название проекта',
         max_length=constants.CHAR_LENGTH
